@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import styles from './Banner.module.css'
 
 const banner = {
     animate: {
@@ -23,13 +24,13 @@ const banner = {
 
   const AnimatedLetters = ({ title, disabled }) => (
     <motion.span
-      className='row-title'
+      className={styles.row_title}
       variants={disabled ? null : banner}
       initial='initial'
       animate='animate'>
       {[...title].map((letter) => (
         <motion.span
-          className='row-letter'
+          className={styles.row_letter}
           variants={disabled ? null : letterAni}>
           {letter}
         </motion.span>

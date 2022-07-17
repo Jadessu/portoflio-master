@@ -1,0 +1,16 @@
+/* Animated Letters */
+
+.row_title, .row_letter{
+    font-size: 28rem;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: -0.8rem;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+    .row_title, .row_letter{
+        font-size: 13rem;
+    }
+}
