@@ -98,12 +98,12 @@ const banner = {
   
   const BannerRowCenter = ({ title, playMarquee }) => {
     return (
-      <div className={`banner-row marquee  ${playMarquee && "animate"}`}>
+      <div className={`${styles.banner_row} ${styles.marquee}  ${playMarquee && styles.animate}`}>
         <motion.div
           initial={{ y: 310 }}
           animate={{ y: 0 }}
           transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
-          className='marquee__inner'>
+          className={styles.marquee_inner}>
           <AnimatedLetters title={title} disabled />
           <AnimatedLetters title={title} />
           <AnimatedLetters title={title} disabled />
@@ -116,9 +116,18 @@ const banner = {
 const Banner = () => {
     const [playMarquee, setPlayMarquee] = useState(false);
 
-  return (
-    <div>Banner</div>
-  )
+    useEffect(() => {
+        setTimeout(() => {
+          setPlayMarquee(true);
+        }, 2000);
+      }, []);
+    return (
+        <motion.div className={styles.banner} variants={banner}>
+          <BannerRowTop title={"brand"} />
+          <BannerRowCenter title={"experience"} playMarquee={playMarquee} />
+          <BannerRowBottom title={"studio"} />
+        </motion.div>
+      );
 }
 
 export default Banner
