@@ -10,10 +10,10 @@ const Header = () => {
             duration: 1,
             delay: 0.6,
           }}
-          className='header'>
-          <div className='header-inner'>
-            <div className='logo'>Ollie</div>
-            <nav className='nav'>
+          className={styles.header}>
+          <div className={styles.header_inner}>
+            <div className={styles.logo}>Ollie</div>
+            <nav className={styles.nav}>
               <li>
                 <a href='/design'>Design</a>
               </li>
@@ -30,10 +30,10 @@ const Header = () => {
                 <a href='/why'>Why work with us?</a>
               </li>
             </nav>
-            <div className='contact'>
+            <div className={styles.contact}>
               <a href='/contact'>Let's work together</a>
             </div>
-            <div className='hamburger-menu'>
+            <div className={styles.hamburger_menu}>
               <span></span>
               <span></span>
             </div>
