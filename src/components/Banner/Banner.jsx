@@ -40,8 +40,8 @@ const banner = {
 
   const BannerRowTop = ({ title }) => {
     return (
-      <div className={"banner-row"}>
-        <div className='row-col'>
+      <div className={styles.banner_row}>
+        <div className={styles.row_col}>
           <AnimatedLetters title={title} />
         </div>
         <motion.div
@@ -52,8 +52,8 @@ const banner = {
             duration: 1,
             delay: 0.4,
           }}
-          className='row-col'>
-          <span className='row-message'>
+          className={styles.row_col}>
+          <span className={styles.row_message}>
             We are specialised in setting up the foundation of your brand and
             setting you up for success.
           </span>
