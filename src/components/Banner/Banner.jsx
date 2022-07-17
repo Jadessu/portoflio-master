@@ -20,8 +20,27 @@ const banner = {
       },
     },
   };
+
+  const AnimatedLetters = ({ title, disabled }) => (
+    <motion.span
+      className='row-title'
+      variants={disabled ? null : banner}
+      initial='initial'
+      animate='animate'>
+      {[...title].map((letter) => (
+        <motion.span
+          className='row-letter'
+          variants={disabled ? null : letterAni}>
+          {letter}
+        </motion.span>
+      ))}
+    </motion.span>
+  );
   
+
 const Banner = () => {
+    const [playMarquee, setPlayMarquee] = useState(false);
+
   return (
     <div>Banner</div>
   )
