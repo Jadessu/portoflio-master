@@ -37,6 +37,30 @@ const banner = {
       ))}
     </motion.span>
   );
+
+  const BannerRowTop = ({ title }) => {
+    return (
+      <div className={"banner-row"}>
+        <div className='row-col'>
+          <AnimatedLetters title={title} />
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 0.4,
+          }}
+          className='row-col'>
+          <span className='row-message'>
+            We are specialised in setting up the foundation of your brand and
+            setting you up for success.
+          </span>
+        </motion.div>
+      </div>
+    );
+  };
   
 
 const Banner = () => {
